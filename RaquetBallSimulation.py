@@ -1,4 +1,4 @@
-'''Raquetball Simulation.  Chapter 12 Exercise in Python Programming: Intro to Computer Science by John Zelle
+'''Raquetball Simulation.  Chapter 12 - Python Programming: Intro to Computer Science by John Zelle
 Created by: Daniel Berrones
 Email: daniel.a.berrones@gmail.com
 Website: http://www.danielberrones.com
