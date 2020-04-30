@@ -7,6 +7,8 @@ Website: http://www.danielberrones.com
 
 from random import random
 
+from websocket._http import proxy_info
+
 
 class Player:
     def __init__(self, prob):
@@ -21,6 +23,7 @@ class Player:
 
     def getScore(self):
         return self.score
+
 
 
 class GameInProgress:
@@ -38,7 +41,7 @@ class GameInProgress:
 
     def endOfGame(self):
         a,b = self.getScores()
-        return a == 15 or b == 15
+        # print(a == 15 or b == 15) or (a == 7 and b == 0) or (b==7 and a==0)
 
     def changeServer(self):
         if self.server == self.playerA:
@@ -58,13 +61,20 @@ class GameStats:
         self.shutsB = 0
 
     def update(self, aGame):
-        pass
+        a, b = aGame.getScores()
+        if a > b:
+            self.winsA += 1
+            if b == 0:
+                self.shutsA += 1
+        else:
+            self.winsB += 1
+            if a == 0:
+                self.shutsB += 1
 
     def printReport(self):
-        pass
-
-    def printLine(self, label, wins, shuts, nGames):
-        pass
+        n = self.winsA + self.winsB
+        print("Player A",self.winsA)
+        print("Player B",self.winsB)
 
 
 def printIntro():
@@ -78,10 +88,10 @@ def printIntro():
 
 def getInputs():
     'gets probA/probA (winning percentage) from user'
-    probA = int(input("ProbA: "))
-    probB = int(input("ProbB: "))
-    nGames = int(input("Number games: "))
-    return probA, probB, nGames
+    a = float(input("ProbA: "))
+    b = float(input("ProbB: "))
+    n = int(input("Number games: "))
+    return a, b, n
 
 
 def main():
