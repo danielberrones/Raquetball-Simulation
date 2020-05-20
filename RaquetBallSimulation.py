@@ -4,9 +4,7 @@ Email: daniel.a.berrones@gmail.com
 Website: http://www.danielberrones.com
 '''
 
-
 from random import random
-
 from websocket._http import proxy_info
 
 
@@ -105,6 +103,7 @@ def main():
         stats.update(theGame)
 
     stats.printReport()
+
 
 if __name__ == '__main__':
     main()
