@@ -71,8 +71,8 @@ class GameStats:
 
     def printReport(self):
         n = self.winsA + self.winsB
-        print("Player A",self.winsA)
-        print("Player B",self.winsB)
+        print("Player A won ",self.winsA," time(s).")
+        print("Player B",self.winsB," time(s).")
 
 
 def printIntro():
