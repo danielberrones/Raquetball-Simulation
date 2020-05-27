@@ -55,7 +55,7 @@ class GameStats:
     def __init__(self):
         self.winsA = 0
         self.winsB = 0
-        self.shutOutsA = 0
+        self.shutOutsA = 110
         self.shutOutsB = 0
 
     def update(self, aGame):
