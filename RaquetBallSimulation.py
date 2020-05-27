@@ -55,19 +55,13 @@ class GameStats:
     def __init__(self):
         self.winsA = 0
         self.winsB = 0
-        self.shutOutsA = 110
-        self.shutOutsB = 0
 
     def update(self, aGame):
         a, b = aGame.getScores()
         if a > b:
             self.winsA += 1
-            if b == 0:
-                self.shutOutsA += 1
         else:
             self.winsB += 1
-            if a == 0:
-                self.shutOutsB += 1
 
     def printReport(self):
         n = self.winsA + self.winsB
@@ -97,7 +91,7 @@ def main():
     probA, probB, nGames = getInputs()
 
     stats = GameStats()
-    print(stats.shutOutsA)
+    
     #for i in range(nGames):
     #    theGame = GameInProgress(probA,probB)
     #    theGame.play()
