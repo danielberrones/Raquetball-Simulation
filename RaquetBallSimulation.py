@@ -1,4 +1,4 @@
-'''Raquetball Simulation.  Chapter 12 - Python Programming: Intro to Computer Science by John Zelle
+'''I modified the code from this Raquetball Simulation (Monte Carlo Simulation) as found in Chapter 12 - Python Programming: Intro to Computer Science by John Zelle
 Created by: Daniel Berrones
 Email: daniel.a.berrones@gmail.com
 Website: http://www.danielberrones.com
