@@ -5,7 +5,7 @@ Website: http://www.danielberrones.com
 '''
 
 from random import random
-from websocket._http import proxy_info
+#from websocket._http import proxy_info
 
 
 class Player:
@@ -55,19 +55,19 @@ class GameStats:
     def __init__(self):
         self.winsA = 0
         self.winsB = 0
-        self.shutsA = 0
-        self.shutsB = 0
+        self.shutOutsA = 0
+        self.shutOutsB = 0
 
     def update(self, aGame):
         a, b = aGame.getScores()
         if a > b:
             self.winsA += 1
             if b == 0:
-                self.shutsA += 1
+                self.shutOutsA += 1
         else:
             self.winsB += 1
             if a == 0:
-                self.shutsB += 1
+                self.shutOutsB += 1
 
     def printReport(self):
         n = self.winsA + self.winsB
@@ -97,10 +97,10 @@ def main():
     probA, probB, nGames = getInputs()
 
     stats = GameStats()
-    for i in range(nGames):
-        theGame = GameInProgress(probA,probB)
-        theGame.play()
-        stats.update(theGame)
+    #for i in range(nGames):
+    #    theGame = GameInProgress(probA,probB)
+    #    theGame.play()
+    #    stats.update(theGame)
 
     stats.printReport()
 
