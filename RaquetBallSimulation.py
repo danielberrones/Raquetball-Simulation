@@ -31,14 +31,14 @@ class GameInProgress:
         self.server = self.playerA
 
     def play(self):
-        while not self.endOfGame():
-            if self.server.winsServe():
-                self.server.increaseScore()
-            else:
-                self.changeServer()
+        #while not self.endOfGame():
+        if self.server.winsServe():
+            self.server.increaseScore()
+        else:
+            self.changeServer()
 
-    def endOfGame(self):
-        a,b = self.getScores()
+    #def endOfGame(self):
+        #a,b = self.getScores()
         # print(a == 15 or b == 15) or (a == 7 and b == 0) or (b==7 and a==0)
 
     def changeServer(self):
