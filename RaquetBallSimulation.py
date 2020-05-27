@@ -71,8 +71,8 @@ class GameStats:
 
     def printReport(self):
         n = self.winsA + self.winsB
-        print("Player A won ",self.winsA," time(s).")
-        print("Player B",self.winsB," time(s).")
+        print("Player A won",self.winsA,"time(s).")
+        print("Player B won",self.winsB,"time(s).")
 
 
 def printIntro():
@@ -97,6 +97,7 @@ def main():
     probA, probB, nGames = getInputs()
 
     stats = GameStats()
+    print(stats.shutOutsA)
     #for i in range(nGames):
     #    theGame = GameInProgress(probA,probB)
     #    theGame.play()
