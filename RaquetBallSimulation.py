@@ -36,7 +36,7 @@ class GameInProgress:
             self.server.increaseScore()
         else:
             self.changeServer()
-            self.server.increaseScore()
+            #self.server.increaseScore()
 
     #def endOfGame(self):
         #a,b = self.getScores()
