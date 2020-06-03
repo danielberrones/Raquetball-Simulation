@@ -36,6 +36,7 @@ class GameInProgress:
             self.server.increaseScore()
         else:
             self.changeServer()
+            self.server.increaseScore()
 
     #def endOfGame(self):
         #a,b = self.getScores()
@@ -64,7 +65,6 @@ class GameStats:
             self.winsB += 1
 
     def printReport(self):
-        n = self.winsA + self.winsB
         print("Player A won",self.winsA,"time(s).")
         print("Player B won",self.winsB,"time(s).")
 
@@ -92,10 +92,10 @@ def main():
 
     stats = GameStats()
     
-    #for i in range(nGames):
-    #    theGame = GameInProgress(probA,probB)
-    #    theGame.play()
-    #    stats.update(theGame)
+    for i in range(nGames):
+        theGame = GameInProgress(probA,probB)
+        theGame.play()
+        stats.update(theGame)
 
     stats.printReport()
 
